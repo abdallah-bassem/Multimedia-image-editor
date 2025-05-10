@@ -5,8 +5,8 @@ A desktop application built with Python, Tkinter, and `ttkbootstrap` for basic i
 ## Features
 
 *   **Image Loading & Saving:**
-    *   Open common image formats.
-    *   Save edited images.
+    *   Open common image formats (JPG, JPEG, PNG, GIF, BMP).
+    *   Save edited images in PNG, JPG, or BMP formats.
 *   **Image Display:**
     *   Displays images on a canvas, fitting them while maintaining aspect ratio.
     *   Placeholder text when no image is loaded.
@@ -34,8 +34,6 @@ A desktop application built with Python, Tkinter, and `ttkbootstrap` for basic i
 *   **User Interface:**
     *   Modern look and feel using the `ttkbootstrap` "vapor" theme.
     *   Organized layout with a tools panel and a main image canvas.
-    *   Buttons with icons for common actions.
-    *   Status bar to provide feedback on operations.
     *   Interactive filter selection via a combobox.
     *   Buttons are enabled/disabled based on whether an image is loaded.
 
@@ -45,6 +43,7 @@ A desktop application built with Python, Tkinter, and `ttkbootstrap` for basic i
 *   **Tkinter:** Standard Python interface to the Tcl/Tk GUI toolkit.
 *   **ttkbootstrap:** A collection of modern, flat themes for Tkinter/TTK.
 *   **Pillow (PIL Fork):** Python Imaging Library for opening, manipulating, and saving many different image file formats.
+
 
 ## Prerequisites
 
@@ -83,3 +82,39 @@ Navigate to the directory containing `app.py` and run the script using Python:
 
 ```bash
 python app.py
+```
+
+## Usage Guide
+
+1.  **Open an Image:**
+    *   Click the "Open Image" button in the "File Operations" section.
+    *   Select an image file from your computer. The image will be displayed on the canvas.
+2.  **Apply Transformations:**
+    *   **Flip:** Click the "Flip" button in the "Transformations" section to flip the image horizontally.
+    *   **Rotate:** Click the "Rotate" button to rotate the image 90 degrees clockwise.
+3.  **Apply Filters:**
+    *   Select a filter from the dropdown menu in the "Image Filters" section. The filter will be applied to the image instantly.
+4.  **Drawing on the Image:**
+    *   **Select Pen Color:** Click the "Pen Color" button in the "Drawing Tools" section to choose a color for drawing.
+    *   **Draw:** Click and drag your mouse on the image canvas to draw.
+    *   **Clear Drawings:** Click the "Clear Drawings" button to remove all drawings made on the current image.
+5.  **Save the Edited Image:**
+    *   Click the "Save Image" button.
+    *   Choose a location, file name, and format (PNG, JPG, BMP) to save your edited image. The drawings will be included in the saved image.
+6.  **Status Bar:**
+    *   Keep an eye on the status bar at the bottom of the window for messages about ongoing operations, errors, or successful actions.
+
+## File Structure
+
+```
+Multimedia-image-editor/
+├── app.py              # The main application script
+├── app_icon.png        # (Optional) Application icon
+├── open_icon.png       # (Optional) Icon for open button
+├── save_icon.png       # (Optional) Icon for save button
+├── flip_icon.png       # (Optional) Icon for flip button
+├── rotate_icon.png     # (Optional) Icon for rotate button
+├── color_icon.png      # (Optional) Icon for color picker button
+└── erase_icon.png      # (Optional) Icon for erase button
+```
+
